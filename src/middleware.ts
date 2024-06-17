@@ -1,10 +1,10 @@
 // former middleware.ts (just in case). Just this one line of code
 //export { default } from "next-auth/middleware"
-
 import { type NextRequest } from 'next/server'
 import { updateSession } from '../utils/supabase/middleware'
 
 export async function middleware(request: NextRequest) {
+  // update user's auth session
   return await updateSession(request)
 }
 

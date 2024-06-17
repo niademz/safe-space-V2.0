@@ -566,6 +566,9 @@ video {
   --tw-contain-paint:  ;
   --tw-contain-style:  ;
 }
+.block {
+  display: block;
+}
 
 :root {
   --foreground-rgb: 0, 0, 0;
