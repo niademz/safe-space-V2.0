@@ -2,6 +2,7 @@
 import { useCallback, useEffect, useState } from 'react'
 import { createClient } from '../../../utils/supabase/client'
 import { type User } from '@supabase/supabase-js'
+import Avatar from './avatar'
 
 export default function AccountForm({ user }: { user: User | null }) {
   const supabase = createClient()
@@ -12,17 +13,22 @@ export default function AccountForm({ user }: { user: User | null }) {
   const [avatar_url, setAvatarUrl] = useState<string | null>(null)
 
   const getProfile = useCallback(async () => {
+    if (!user) {
+      setLoading(false)
+      return
+    }
+
     try {
       setLoading(true)
 
       const { data, error, status } = await supabase
         .from('profiles')
         .select(`full_name, username, website, avatar_url`)
-        .eq('id', user?.id)
+        .eq('id', user.id)
         .single()
 
       if (error && status !== 406) {
-        console.log(error)
+        console.error('Error fetching profile:', error)
         throw error
       }
 
@@ -45,6 +51,7 @@ export default function AccountForm({ user }: { user: User | null }) {
 
   async function updateProfile({
     username,
+    fullname,
     website,
     avatar_url,
   }: {
@@ -53,11 +60,13 @@ export default function AccountForm({ user }: { user: User | null }) {
     website: string | null
     avatar_url: string | null
   }) {
+    if (!user) return
+
     try {
       setLoading(true)
 
       const { error } = await supabase.from('profiles').upsert({
-        id: user?.id as string,
+        id: user.id,
         full_name: fullname,
         username,
         website,
@@ -75,6 +84,15 @@ export default function AccountForm({ user }: { user: User | null }) {
 
   return (
     <div className="form-widget">
+      <Avatar
+        uid={user?.id ?? null}
+        url={avatar_url}
+        size={150}
+        onUpload={(url) => {
+          setAvatarUrl(url)
+          updateProfile({ fullname, username, website, avatar_url: url })
+        }}
+      />
       <div>
         <label htmlFor="email">Email</label>
         <input id="email" type="text" value={user?.email} disabled />
