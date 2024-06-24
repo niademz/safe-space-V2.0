@@ -39,7 +39,7 @@ export default function AccountForm({ user }: { user: User | null }) {
         setAvatarUrl(data.avatar_url)
       }
     } catch (error) {
-      alert('Error loading user data!')
+      alert('You need to login to access this page')
     } finally {
       setLoading(false)
     }
