@@ -2,6 +2,7 @@
 import Link from 'next/link'
 import Image from 'next/image'
 
+
 export default function Home() {
   return (
     <main>
@@ -9,7 +10,7 @@ export default function Home() {
         
         {/* chat room */}
         <Link href="/page1">
-          <div>
+          <div >
             <Image
               src="/images/chatRoomPic.png"
               alt="Chat Room Picture"
