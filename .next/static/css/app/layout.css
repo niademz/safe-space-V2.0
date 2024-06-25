@@ -581,8 +581,14 @@ video {
 .gap-5 {
   gap: 1.25rem;
 }
+.overflow-hidden {
+  overflow: hidden;
+}
 .rounded-lg {
   border-radius: 0.5rem;
+}
+.rounded-full {
+  border-radius: 9999px;
 }
 .p-8 {
   padding: 2rem;
@@ -726,6 +732,8 @@ form select {
   padding-right: 0.5rem;
   padding-top: 0.25rem;
   padding-bottom: 0.25rem;
+  --tw-text-opacity: 1;
+  color: rgb(0 0 0 / var(--tw-text-opacity));
 }
 form button {
   margin-left: auto;
@@ -733,6 +741,19 @@ form button {
   display: block;
 }
 
+input {
+  margin-bottom: 1rem;
+  margin-top: 0.5rem;
+  display: block;
+  width: 100%;
+  border-radius: 0.125rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  --tw-text-opacity: 1;
+  color: rgb(0 0 0 / var(--tw-text-opacity));
+}
 /* feedback styles */
 .error {
   margin-top: 1rem;

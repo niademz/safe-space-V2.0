@@ -84,6 +84,7 @@ export default function AccountForm({ user }: { user: User | null }) {
 
   return (
     <div className="form-widget">
+    <center>
       <Avatar
         uid={user?.id ?? null}
         url={avatar_url}
@@ -93,6 +94,7 @@ export default function AccountForm({ user }: { user: User | null }) {
           updateProfile({ fullname, username, website, avatar_url: url })
         }}
       />
+      </center>
       <div>
         <label htmlFor="email">Email</label>
         <input id="email" type="text" value={user?.email} disabled />
@@ -107,7 +109,7 @@ export default function AccountForm({ user }: { user: User | null }) {
         />
       </div>
       <div>
-        <label htmlFor="username">Username</label>
+        <label htmlFor="username">Anonymous Username</label>
         <input
           id="username"
           type="text"
@@ -127,7 +129,7 @@ export default function AccountForm({ user }: { user: User | null }) {
 
       <div>
         <button
-          className="button primary block"
+          className="button block"
           onClick={() => updateProfile({ fullname, username, website, avatar_url })}
           disabled={loading}
         >
