@@ -16,7 +16,7 @@ export default function Navbar() {
       <Link href="/">Home</Link>
       <Link href="/account">Account</Link>
       <Link href="/chat room">Chat</Link>
-      <Link href="/resources">Resources</Link>
+      <Link href="/chat room">Resources</Link>
       <Link href="/weekly challenges">Challenges</Link>
       <Link href="/login">Login</Link>
 
