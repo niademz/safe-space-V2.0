@@ -1,11 +1,12 @@
 // homepage
 import Link from 'next/link'
 import Image from 'next/image'
-
+import UserGreetText from '@/components/UserGreetText'
 
 export default function Home() {
   return (
     <main>
+      <UserGreetText />
       <div className="grid grid-cols-1 md:grid-cols-3 gap-5 p-8">
         
         {/* chat room */}

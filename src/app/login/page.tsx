@@ -1,4 +1,5 @@
 import { login, signup } from './actions'
+import SignInWithGoogleButton from './SignInWithGoogleButton'
 
 export default function LoginPage() {
   
@@ -11,6 +12,7 @@ export default function LoginPage() {
         <input id="password" name="password" type="password" required />
         <button formAction={login}>Log in</button>
         <button formAction={signup}>Sign up</button>
+        <SignInWithGoogleButton/>
       </form>
 
       

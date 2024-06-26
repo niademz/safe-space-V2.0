@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import Navimage from './safe-waving.png' // imports the image you wanna use can call it anything
+import LoginButton from '@/components/LoginLogoutButton'
 
 export default function Navbar() {
   return (
@@ -18,7 +19,7 @@ export default function Navbar() {
       <Link href="/chat room">Chat</Link>
       <Link href="/chat room">Resources</Link>
       <Link href="/weekly challenges">Challenges</Link>
-      <Link href="/login">Login</Link>
+      <LoginButton />
 
 
       </nav>
