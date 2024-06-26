@@ -14,7 +14,7 @@ export default function Navbar() {
         quality={100} //maximum quality
       />
       <h1>welcome!</h1>
-      <Link href="/">Dashboard</Link>
+      <Link href="/">Home</Link>
       <Link href="/account">Account</Link>
       <Link href="/chat room">Chat</Link>
       <Link href="/chat room">Resources</Link>

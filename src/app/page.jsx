@@ -24,7 +24,7 @@ export default function Home() {
         </Link>
 
         {/* affirmation nation */}
-        <Link href="/page2">
+        <Link href="/affirmationNation">
           <div>
             <Image
               src="/images/Add_a_heading_-_1.png"
