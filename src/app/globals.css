@@ -14,7 +14,6 @@ h1, h2 {
   @apply font-bold text-primary text-lg;
 }
 
-
 main {
   @apply max-w-5xl my-12 mx-auto px-8;
 }
@@ -150,3 +149,22 @@ input {
     absolute bottom-0 right-0 
     rounded-tl-md;
 }
+
+
+/*styling "welcome to resources"*/
+
+.gradient-text {
+  background: linear-gradient(to right, #ff9900, #ff66cc); /* Adjust gradient colors */
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.main-heading {
+  font-size: 4rem; /* Adjust size as needed */
+  font-weight: bold;
+  text-align: center;
+  margin-top: 0; /* Adjust margin as needed */
+}
+
+/*end of welcome to resources styling */

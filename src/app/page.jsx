@@ -6,11 +6,11 @@ import Image from 'next/image'
 export default function Home() {
   return (
     <main>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-5 p-8">
+      <div className="grid display-flex gap-5 p-8"> {/* Added display-flex class */}
         
         {/* chat room */}
         <Link href="/page1">
-          <div >
+          <div>
             <Image
               src="/images/chatRoomPic.png"
               alt="Chat Room Picture"
@@ -37,7 +37,7 @@ export default function Home() {
         </Link>
 
         {/* Resources */}
-        <Link href="/page3">
+        <Link href="/resources">
           <div>
             <Image
               src="/images/Untitled_Artwork (2).png"

@@ -1,4 +1,4 @@
-// File: C:\Users\niade\safe-space\src\app\layout.jsx
+// File: C:\Users\chiny\OneDrive\Desktop\safe space dev\safe-space-V2.0\src\app\layout.jsx
 import * as entry from '../../../src/app/layout.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 
