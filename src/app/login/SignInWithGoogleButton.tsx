@@ -2,7 +2,6 @@
 import { Button } from "@/components/ui/button";
 import { signInWithGoogle } from "@/lib/auth-actions";
 import React from "react";
-import Image from "next/image";
 
 const SignInWithGoogleButton = () => {
   return (
@@ -14,12 +13,6 @@ const SignInWithGoogleButton = () => {
         signInWithGoogle();
       }}
     >
-      <Image 
-      src= "https://authjs.dev/img/providers/google.svg"
-      alt="google_logo"
-      height={24}
-      width={24}
-      />
       Login with Google
     </Button>
   );

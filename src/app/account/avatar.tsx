@@ -1,6 +1,6 @@
 'use client'
 import React, { useEffect, useState } from 'react'
-import { createClient } from '../../../utils/supabase/client'
+import { supabaseClient } from '../../../utils/supabase/client'
 import Image from 'next/image'
 
 export default function Avatar({
@@ -14,7 +14,7 @@ export default function Avatar({
   size: number
   onUpload: (url: string) => void
 }) {
-  const supabase = createClient()
+  const supabase = supabaseClient()
   const [avatarUrl, setAvatarUrl] = useState<string | null>(url)
   const [uploading, setUploading] = useState(false)
 
@@ -78,7 +78,7 @@ export default function Avatar({
       )}
       <div style={{ width: size }}>
         <label className="button primary block" htmlFor="single">
-          {uploading ? 'Uploading ...' : 'Upload Profile Picture'}
+          {uploading ? 'Uploading ...' : 'Upload'}
         </label>
         <input
           style={{

@@ -1,8 +1,8 @@
 import AccountForm from './account-form'
-import { createClient } from '../../../utils/supabase/server'
+import { supabaseServer } from '../../../utils/supabase/server'
 
 export default async function Account() {
-  const supabase = createClient()
+  const supabase = supabaseServer()
 
   const {
     data: { user },
@@ -11,7 +11,7 @@ export default async function Account() {
 
   if (error || !user) {
     console.error('Error fetching user:', error)
-    return <div>You need to login to access this page!!</div>
+    return <div>Error fetching user data</div>
   }
 
   return <AccountForm user={user} />
