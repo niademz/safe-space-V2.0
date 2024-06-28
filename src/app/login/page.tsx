@@ -14,10 +14,6 @@ export default function LoginPage() {
         <button formAction={signup}>Sign up</button>
         <SignInWithGoogleButton/>
       </form>
-
-      
-
-      
     </>
   )
 }
