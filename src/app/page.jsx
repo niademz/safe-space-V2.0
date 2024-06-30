@@ -66,7 +66,7 @@ export default function Home() {
         </Link>
 
         {/* Music! */}
-        <Link href="/page3">
+        <Link href="/music">
           <div>
             <Image
               src="/images/safe_dancing (3).png"
@@ -94,6 +94,8 @@ export default function Home() {
         </Link>
         
       </div>
+
+      
     </main>
   )
 }
