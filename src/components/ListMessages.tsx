@@ -14,35 +14,36 @@ export default function ListMessages() {
       .channel('chat-room')
       .on(
         'postgres_changes', 
-        { event: 'INSERT', schema: 'public', table: 'messages' }, 
-        async(payload) => {
+        { event: 'INSERT', schema: 'public', table: 'messages' },
+        async (payload) => {
           if(!optimisticIds.includes(payload.new.id)) {
-            console.log("debugging 1", optimisticIds)
-          const {error,data} = await supabase
-            .from("profiles")
-            .select("*")
-            .eq("id",payload.new.send_by)
-            .single();
-          if(error){
-            toast.error(error.message);
-          }else{
-            const newMessage = {
-              ...payload.new,
-              profiles: data,
+            console.log('opid 1', optimisticIds)
+            console.log('payload', payload.new)
+            const {error,data} = await supabase
+              .from("profiles")
+              .select("*")
+              .eq("id",payload.new.send_by)
+              .single();
+            if(error){
+              toast.error(error.message);
+            }else{
+              const newMessage = {
+                ...payload.new,
+                profiles: data,
+              }
+              console.log('opid 2', optimisticIds)
+              addMessage(newMessage as unknown as Imessage)
+              console.log('opid 3', optimisticIds)
             }
-            console.log("debugging 1", optimisticIds)
-            addMessage(newMessage as unknown as Imessage)
-            console.log("debugging 2", optimisticIds)
           }
-        }
         }
 
       )
         .subscribe()
-    return () =>{
+    return () => {
       channel.unsubscribe()
     }
-  }, [messages])
+  }, [addMessage, messages, optimisticIds, supabase])
   
   return (
     <div className="flex-1 flex flex-col p-5 h-full overflow-y-auto">

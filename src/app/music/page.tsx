@@ -3,7 +3,7 @@ import React from "react"
 export default function MusicPage() {
     return (
       <main>
-        <center><h1>These are Safe's Playlists</h1> </center>
+        <center><h1>These are Safe&apos;s Playlists</h1> </center>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-5 p-8">
         <div style={{ borderRadius: '12px', overflow: 'hidden' }}>
       <iframe

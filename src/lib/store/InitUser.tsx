@@ -14,7 +14,7 @@ export default function InitUser({user}:{user:User|undefined}) {
         initState.current = true;
         //eslint-disable-next-line
 
-    },[])
+    },[user])
   
   
     return <></>;

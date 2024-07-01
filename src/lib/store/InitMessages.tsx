@@ -13,7 +13,7 @@ export default function InitMessages({ messages }:{ messages: Imessage[]}) {
         initState.current = true;
         //eslint-disable-next-line
 
-    },[])
+    },[messages])
   
   
     return <></>;
