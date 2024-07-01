@@ -7,11 +7,11 @@ export default function Home() {
   return (
     <main>
       <UserGreetText />
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-5 p-8">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-5 p-8 ">
         
         {/* chat room */}
-        <Link href="/page1">
-          <div >
+        <Link href="/chatroom">
+          <div className="image-container">         
             <Image
               src="/images/chatRoomPic.png"
               alt="Chat Room Picture"
@@ -38,7 +38,7 @@ export default function Home() {
         </Link>
 
         {/* Resources */}
-        <Link href="/page3">
+        <Link href="/resources">
           <div>
             <Image
               src="/images/Untitled_Artwork (2).png"
@@ -80,7 +80,7 @@ export default function Home() {
         </Link>
 
         {/* Have an issue? */}
-        <Link href="/page3">
+        <Link href="/haveIssue">
           <div>
             <Image
               src="/images/Untitled_Artwork (3).png"
