@@ -37,7 +37,7 @@ export default function ChatInput() {
                     
                     profiles:{
                         id: user?.id,
-                        avatar_url: user?.user_metadata.avatar_url,
+                        avatar_url: data?.avatar_url,
                         created_at: new Date().toISOString(),
                         full_name: user?.user_metadata.full_name,
                         updated_at: user?.updated_at,
