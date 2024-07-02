@@ -22,7 +22,7 @@ export default function Resources() {
          
          {/* General Mental Health Resources */}
           <Link
-            href="/"
+            href="/generalRes"
             className="group relative block overflow-hidden rounded-lg shadow-lg transition-all hover:shadow-xl"
             prefetch={false}
           >
@@ -41,7 +41,7 @@ export default function Resources() {
 
         {/* Anxiety Resources */}
           <Link
-            href="/"
+            href="/anxiety"
             className="group relative block overflow-hidden rounded-lg shadow-lg transition-all hover:shadow-xl"
             prefetch={false}
           >
@@ -62,7 +62,7 @@ export default function Resources() {
 
         {/*ED Resources */}
           <Link
-            href="/"
+            href="/ed"
             className="group relative block overflow-hidden rounded-lg shadow-lg transition-all hover:shadow-xl"
             prefetch={false}
           >
@@ -83,7 +83,7 @@ export default function Resources() {
           
         {/*Depression Resources */}
         <Link
-            href="/"
+            href="/depression"
             className="group relative block overflow-hidden rounded-lg shadow-lg transition-all hover:shadow-xl"
             prefetch={false}
           >
