@@ -1,25 +1,26 @@
 /* eslint-disable @next/next/no-css-tags */
 import React from 'react';
-import Link from 'next/link';
-import Head from 'next/head';
+import Image from 'next/image';
 
 
 export default function RPG() {
   return (
-    <div className="game-container">
-      <Head>
-        <title>Pixel RPG Game</title>
-        <link rel="stylesheet" href="/rpg.css" />
-        <script src="/rpg.js" defer></script>
-      </Head>
-      <nav>
-        <Link href="/">Home</Link>
-        <Link href="/affirmation-nation">Affirmation Nation</Link>
-        {/* Add more links as needed */}
-      </nav>
-      <div id="gameCanvasContainer">
-        <canvas id="gameCanvas"></canvas>
+    <>
+    <center>
+    <h1>Affirmation Nation: Coming Soon!</h1>
+    <div >
+      <div>
+      <Image
+              src="/images/affirmation.png"
+              alt="Affirmation nation game"
+              width={500}
+              height={500}
+              className="rounded-lg"/>
+
       </div>
-    </div>
+      <h2>Affirmation nation is an PRG game based on sending affirmaitons to build communities with other users. The game is still early in development, and we would love to hear ideas from the community on features they want to see in the game!!</h2>
+      </div>
+    </center>
+    </>
   );
 }

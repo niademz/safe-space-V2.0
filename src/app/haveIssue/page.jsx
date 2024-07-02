@@ -10,9 +10,9 @@ export default function HaveIssue() {
            
   This form is used to report issues with Safe Space. For accessibility purposes, you can also access the form directly at <a href="https://docs.google.com/forms/d/e/1FAIpQLSdj_v4H3JtFy9-ECUmKw3XwiOcn2Pk_T3mbGRcX26geEhIc6Q/viewform">this link</a>.
 </p>
-
+<center>
 <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdj_v4H3JtFy9-ECUmKw3XwiOcn2Pk_T3mbGRcX26geEhIc6Q/viewform?embedded=true" width="640" height="813" frameborder="0" marginheight="0" marginwidth="0" allowfullscreen allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture">Loading…</iframe>
-
+</center>
     </main>
   )
 }

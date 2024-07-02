@@ -11,7 +11,7 @@ export default async function Account() {
 
   if (error || !user) {
     console.error('Error fetching user:', error)
-    return <div>Error fetching user data</div>
+    return <div>You need to login to access this page!!</div>
   }
 
   return <AccountForm user={user} />

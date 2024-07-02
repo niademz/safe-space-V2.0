@@ -18,7 +18,7 @@ export default function Navbar() {
       <Link href="/account">Account</Link>
       <Link href="/chatroom">Chat</Link>
       <Link href="/resources">Resources</Link>
-      <Link href="/weekly challenges">Challenges</Link>
+      <Link href="/challenge">Challenges</Link>
       <LoginButton />
 
 

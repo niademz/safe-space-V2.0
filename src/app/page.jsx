@@ -52,7 +52,7 @@ export default function Home() {
         </Link>
 
         {/* Community Challenges */}
-        <Link href="/page3">
+        <Link href="/challenge">
           <div>
             <Image
               src="/images/Trying_your_best_-as.png"
