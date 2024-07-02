@@ -94,8 +94,11 @@ export default function Home() {
         </Link>
         
       </div>
-
-      
+      <center>
+      <p className="mt-2 text-muted-foreground md:text-xl">
+        More Safe Space links: <a href='https://linktr.ee/safespace_itmatters'>https://linktr.ee/safespace_itmatters</a> 
+      </p>
+      </center>
     </main>
   )
 }
