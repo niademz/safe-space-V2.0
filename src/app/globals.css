@@ -189,3 +189,14 @@ input {
 }
 
 /* end of welcome styling */
+
+/*Link Hover*/ 
+.link-hover {
+  color: inherit; /* Inherit color from parent element */
+  text-decoration: none; /* Remove default underline */
+  transition: color 0.3s ease-in-out; /* Add hover transition */
+}
+
+.link-hover:hover {
+  color: #007bff; /* Change color on hover (example blue) */
+}
