@@ -2,7 +2,7 @@
 const nextConfig = {
     images:{
         remotePatterns:[{
-            hostname: "lh3.googleusercontent.com",
+            hostname: "gpnatftzuhczaxmkthzl.supabase.co",
             protocol: "https"
         }]
     }

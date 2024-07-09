@@ -7,11 +7,11 @@ export default function Message({message}:{message: Imessage}) {
     <div className="flex gap-2">
         <div>
             <Image 
-                src={"/" + message.profiles?.avatar_url!} 
+                src={`${process.env.NEXT_PUBLIC_SUPABASE_URL}/storage/v1/object/public/avatars/${message.profiles?.avatar_url}`}
                 alt={message.profiles?.username!}
-                width={40}
-                height={40}
-                className="rounded-full ring-2"
+                width={50}
+                height={50}
+                className="avatar image rounded-full overflow-hidden"
                 />
         </div>  
         <div className="flex-1">
