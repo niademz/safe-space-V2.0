@@ -47,7 +47,7 @@ export default function ChatInput() {
                     },
     
                 };
-                addMessage(newMessage as Imessage);
+               // addMessage(newMessage as Imessage);
                 setOptimisticIds(newMessage.id);
                 console.log('newid', setOptimisticIds)
 
