@@ -18,13 +18,32 @@ const LoginButton = () => {
     };
     fetchUser();
   }, [supabase.auth]);
+
+  const handleLogout = async () => {
+    try {
+      const response = await fetch('/auth/signout', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded',
+        },
+      });
+
+      if (response.ok) {
+        window.location.href = '/login'; // Redirect to the home page or any other page
+      } else {
+        console.error('Logout failed');
+      }
+    } catch (error) {
+      console.error('Error logging out:', error);
+    }
+  };
   if (user) {
     return (
-      <form action="/auth/signout" method="post">
-          <Button variant="outline" type="submit">
+      
+          <Button variant="outline" onClick={handleLogout}>
             Logout
           </Button>
-        </form>
+        
     );
   }
   return (

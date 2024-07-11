@@ -41,6 +41,41 @@ export type Database = {
           },
         ]
       }
+      poems: {
+        Row: {
+          content: string | null
+          created_at: string | null
+          id: string
+          likes: number | null
+          title: string | null
+          user_id: string
+        }
+        Insert: {
+          content?: string | null
+          created_at?: string | null
+          id?: string
+          likes?: number | null
+          title?: string | null
+          user_id?: string
+        }
+        Update: {
+          content?: string | null
+          created_at?: string | null
+          id?: string
+          likes?: number | null
+          title?: string | null
+          user_id?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "poems_user_id_fkey"
+            columns: ["user_id"]
+            isOneToOne: false
+            referencedRelation: "profiles"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
       profiles: {
         Row: {
           avatar_url: string | null
@@ -81,7 +116,16 @@ export type Database = {
       [_ in never]: never
     }
     Functions: {
-      [_ in never]: never
+      random_poems: {
+        Args: Record<PropertyKey, never>
+        Returns: {
+          id: string
+          title: string
+          content: string
+          user_id: string
+          username: string
+        }[]
+      }
     }
     Enums: {
       [_ in never]: never
