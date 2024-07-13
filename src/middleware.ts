@@ -22,3 +22,34 @@ export const config = {
     
   ],
 }
+
+/*
+import { NextRequest, NextResponse } from 'next/server'
+import { updateSession } from '../utils/supabase/middleware'
+
+// Middleware to check authentication
+export async function middleware(request: NextRequest) {
+  // Update the user's auth session
+  await updateSession(request)
+
+  // Assuming you have a function to check if a user is authenticated
+  const isAuthenticated = request.cookies.get('auth-token')
+
+  // Redirect to login if not authenticated
+  if (!isAuthenticated) {
+    const url = request.nextUrl.clone()
+    url.pathname = '/login'
+    return NextResponse.redirect(url)
+  }
+
+  return NextResponse.next()
+}
+
+// Apply middleware to all pages except the login and signup pages
+export const config = {
+  matcher: [
+    '/((?!api|auth|_next/static|_next/image|favicon.ico|login|signup|.*\\.(?:svg|png|jpg|jpeg|gif|webp)$).*)',
+    
+  ],
+}
+*/

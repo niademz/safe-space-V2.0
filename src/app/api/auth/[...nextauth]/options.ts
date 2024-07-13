@@ -26,6 +26,10 @@ export const options: NextAuthOptions = {
 
   session:{
     strategy: "database"
+  },
+
+  pages: {
+    signIn: 'login',
   }
 
 }

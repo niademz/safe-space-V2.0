@@ -13,24 +13,6 @@ export default function ed() {
         <br />
         <br></br>
 
-        **Eating Disorder Treatment** - New Hope Recovery Center provides dual eating disorder and substance abuse treatment programs for residential day treatment and extended care supportive living. Visit <a href="https://www.newhoperecovery.com/" target="_blank" rel="noopener noreferrer">New Hope Recovery Center</a> to learn more about their treatment programs.
-
-        <br />
-        <br></br>
-
-
-        **EdReferral.com** - This website offers the easiest and most comprehensive search for eating disorder treatment on the internet, including resources for anorexia, bulimia, and binge eating. Visit <a href="https://www.edreferral.com/" target="_blank" rel="noopener noreferrer">EdReferral.com</a> to find treatment options.
-
-        <br />
-        <br></br>
-
-
-        **Meditation-Sensation.com** - Meditation-Sensation.com offers specialized meditation programs for individuals struggling with eating disorders. Visit <a href="https://www.meditation-sensation.com/" target="_blank" rel="noopener noreferrer">Meditation-Sensation.com</a> to explore their resources.
-
-        <br />
-        <br></br>
-
-
         **National Association for Males with Eating Disorders (N.A.M.E.D.)** - N.A.M.E.D. provides support, education, resources, a helpline, treatment referrals, online support groups, and more for males with eating disorders. Visit <a href="http://www.namedinc.org/" target="_blank" rel="noopener noreferrer">N.A.M.E.D.</a> for more information.
       </p>
     

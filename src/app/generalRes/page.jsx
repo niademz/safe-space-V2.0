@@ -42,26 +42,6 @@ export default function generalRes() {
       </p>
       <br></br>
 
-      <p>
-        **Anxiety.org** - Anxiety.org provides information, resources, and support for individuals with anxiety. (<a href="https://www.anxiety.org/" target="_blank" rel="noopener noreferrer">Anxiety.org website</a>)
-      </p>
-      <br></br>
-
-      <p>
-        **Anxiety UK** - Anxiety UK is a charity that provides support, education, and advocacy for individuals with anxiety. (<a href="https://www.anxietyuk.org.uk/" target="_blank" rel="noopener noreferrer">Anxiety UK website</a>)
-      </p>
-      <br></br>
-
-      <p>
-        **Moodfit** - Moodfit is an app that provides tools and exercises for managing stress, anxiety, and depression. (<a href="https://mymoodfit.com/" target="_blank" rel="noopener noreferrer">Moodfit app</a>)
-      </p>
-      <br></br>
-
-      <p>
-        **Stress and Anxiety Research Society (STAR)** - STAR provides information and resources on stress and anxiety research. (<a href="http://www.star-society.org/" target="_blank" rel="noopener noreferrer">STAR website</a>)
-      </p>
-      <br></br>
-
 
       <p>
         **Crisis Text Line** - This free, 24/7 text-based support service provides confidential crisis counseling for individuals experiencing anxiety and other mental health concerns. Text HOME to 741741 or visit{' '}
