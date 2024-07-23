@@ -29,26 +29,35 @@ const PoetryPage = () => {
     fetchPoems();
   }, [supabase]);
 
-  const renderContentWithLineBreaks = (content: string) => {
-    return content.split('\n').map((line, index) => (
-      <span key={index}>
-        {line}
-        <br />
-      </span>
-    ));
+  const renderContent = (content: string) => {
+    // Check if the content contains HTML tags
+    const htmlTagPattern = /<\/?[a-z][\s\S]*>/i;
+    if (htmlTagPattern.test(content)) {
+      return <div dangerouslySetInnerHTML={{ __html: content }} />;
+    } else {
+      return content.split('\n').map((line, index) => (
+        <span key={index}>
+          {line}
+          <br />
+        </span>
+      ));
+    }
   };
 
   return (
     <div>
-        <center>
-      <h3>✨️Muse&apos;s Melody✨️</h3>
+      <center>
+        <h3>✨️Muse&apos;s Melody✨️</h3>
       </center>
-      <Link href="/poetry/submit" className="block text-primary underline mb-4 hover:text-blue-500 transition-colors duration-300">Submit a poem!</Link>    
+      <Link href="/poetry/submit" className="block text-primary underline mb-4 hover:text-blue-500 transition-colors duration-300">
+        Submit a poem!
+      </Link> 
+      <p>Refresh to get a new poem!</p>   
       <ul>
         {poems.map((poem) => (
           <li key={poem.id}>
             <h2>{poem.title}</h2>
-            <p>{renderContentWithLineBreaks(poem.content)}</p>
+            {renderContent(poem.content)}
             <p><i>by {poem.username}</i></p>
             <br />
           </li>

@@ -92,6 +92,21 @@ export default function Home() {
             <p className="text-center bold mt-2">Have an Issue?</p>
           </div>
         </Link>
+        <div></div>
+
+        {/* Share poems!! */}
+        <Link href="/poetry">
+          <div>
+            <Image
+              src="/images/poetry.png"
+              alt="poetry"
+              width={500}
+              height={300}
+              className="rounded-lg"
+            />
+            <p className="text-center bold mt-2">Muse&apos;s Melody</p>
+          </div>
+        </Link>
         
       </div>
       <center>
