@@ -2,6 +2,8 @@
 import { useEffect, useState } from 'react';
 import { supabaseClient } from '../../../utils/supabase/client';
 import Link from 'next/link';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowUp } from '@fortawesome/free-solid-svg-icons';
 
 type Poem = {
   id: string;
@@ -13,6 +15,7 @@ type Poem = {
 
 const PoetryPage = () => {
   const [poems, setPoems] = useState<Poem[]>([]);
+  const [showScrollToTop, setShowScrollToTop] = useState(false);
   const supabase = supabaseClient();
 
   useEffect(() => {
@@ -29,8 +32,27 @@ const PoetryPage = () => {
     fetchPoems();
   }, [supabase]);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 300) {
+        setShowScrollToTop(true);
+      } else {
+        setShowScrollToTop(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
+  const handleScrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   const renderContent = (content: string) => {
-    // Check if the content contains HTML tags
     const htmlTagPattern = /<\/?[a-z][\s\S]*>/i;
     if (htmlTagPattern.test(content)) {
       return <div dangerouslySetInnerHTML={{ __html: content }} />;
@@ -63,6 +85,26 @@ const PoetryPage = () => {
           </li>
         ))}
       </ul>
+      {showScrollToTop && (
+        <button 
+        onClick={handleScrollToTop} 
+        style={{
+          position: 'fixed',
+          bottom: '20px',
+          right: '50%',
+          transform: 'translateX(50%)',
+          padding: '10px',
+          backgroundColor: '#b2a4d4',
+          color: '#fff',
+          border: 'none',
+          borderRadius: '50%',
+          cursor: 'pointer',
+          zIndex: 1000
+        }}
+      >
+        <FontAwesomeIcon icon={faArrowUp} />
+      </button>
+      )}
     </div>
   );
 };
